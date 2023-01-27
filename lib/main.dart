@@ -52,7 +52,7 @@ final items = <Widget>[
             color: Colors.white,
             ),
           const Icon(
-            Icons.menu,
+            Icons.shopping_cart_checkout_rounded,
             color: Colors.white),
         ];
     return Scaffold(
@@ -60,11 +60,10 @@ final items = <Widget>[
       extendBodyBehindAppBar: true,
       appBar: AppBar(
         title: Image.asset('assets/images/kma-logo-app.png', 
-       
         ),
         backgroundColor: const Color.fromARGB(0, 0, 0, 0),
         centerTitle: true,
-        elevation: 0,
+        elevation: 0,  
       ),
       body: screens[index],
       bottomNavigationBar: Theme(

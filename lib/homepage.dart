@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:flutter_html/flutter_html.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({ Key? key }) : super(key: key);
@@ -15,7 +16,9 @@ class _HomePageState extends State<HomePage> {
   late CarouselSlider carouselSlider;
 
   List imageList = [
- 'assets/images/kma-logo-app.png',
+'assets/images/dator-ritningar-byggarbetsplats-1000.jpg',
+'assets/images/flygbild-arbetsfordon-vag-1000.jpg',
+'assets/images/ritning-tva-man-1000.jpg',
 
 ];
   @override
@@ -25,7 +28,7 @@ class _HomePageState extends State<HomePage> {
       home: Scaffold(
         backgroundColor: const Color.fromARGB(255, 8, 161, 125),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CarouselSlider(
@@ -37,7 +40,7 @@ class _HomePageState extends State<HomePage> {
                 enlargeCenterPage: true,
                 enableInfiniteScroll: true,
                 scrollDirection: Axis.horizontal,
-                autoPlayInterval: const Duration(seconds: 10),
+                autoPlayInterval: const Duration(seconds: 5),
                 autoPlayAnimationDuration: const Duration(milliseconds: 2000),
                 onPageChanged: (index, reason) => _currentIndex = index,
                 // pauseAutoPlayOnTouch: Duration(seconds: 10),
@@ -76,20 +79,15 @@ class _HomePageState extends State<HomePage> {
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: imageList.map((urlOfItem) {
-                int index = imageList.indexOf(urlOfItem);
-                return Container(
-                  width: 10.0,
-                  height: 10.0,
-                  margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 2.0),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: _currentIndex == index
-                        ? const Color.fromRGBO(0, 0, 0, 0.8)
-                        : const Color.fromRGBO(0, 0, 0, 0.3),
+              children: [
+                Text('Welcome, order your KMA here', 
+                style: 
+                TextStyle(
+                  fontSize: 21, fontFamily: 'Lato Black', color: Colors.white,
                   ),
-                );
-              }).toList(),
+                ),
+                
+              ],
             ),
             
           ],
