@@ -59,8 +59,7 @@ final items = <Widget>[
       backgroundColor: const Color.fromARGB(255, 8, 161, 125),
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Image.asset('assets/images/kma-logo-app.png', 
-        ),
+       
         backgroundColor: const Color.fromARGB(0, 0, 0, 0),
         centerTitle: true,
         elevation: 0,  

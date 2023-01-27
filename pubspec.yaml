@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '2.18.6'
+  sdk: '2.19.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -47,10 +47,7 @@ dev_dependencies:
   flutter_launcher_icons: ^0.11.0
 
 
-flutter_icons:
-  android: true
-  ios: true
-  image_path: "assets/images/12.png"
+
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -66,7 +63,6 @@ flutter_icons:
 flutter:
   uses-material-design: true
   assets:
-  - assets\images\kma-logo-app.png
   - assets\images\mash.png
   - assets\images\dator-ritningar-byggarbetsplats-1000.jpg
   - assets\images\flygbild-arbetsfordon-vag-1000.jpg
