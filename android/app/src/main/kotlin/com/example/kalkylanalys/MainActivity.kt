@@ -1,4 +1,4 @@
-package com.example.kalkylanalys
+package com.sfaholding.kmaanalys
 
 import io.flutter.embedding.android.FlutterActivity
 

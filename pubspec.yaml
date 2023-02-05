@@ -19,7 +19,7 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 version: 1.0.0+1
 
 environment:
-  sdk: '2.18.6'
+  sdk: '2.19.0'
 
 # Dependencies specify other packages that your package needs in order to work.
 # To automatically upgrade your package dependencies to the latest versions
@@ -40,6 +40,11 @@ dependencies:
   flutter_html: ^2.2.1
   webview_flutter: ^2.0.4
   carousel_slider: ^4.2.1
+  in_app_purchase: ^3.1.1
+  purchases_flutter: ^4.8.0
+  firebase_core: ^2.4.1
+  firebase_auth: ^4.2.5
+  google_nav_bar: ^5.0.6
   
 dev_dependencies:
   flutter_test:
@@ -67,6 +72,7 @@ flutter:
   - assets\images\dator-ritningar-byggarbetsplats-1000.jpg
   - assets\images\flygbild-arbetsfordon-vag-1000.jpg
   - assets\images\ritning-tva-man-1000.jpg
+  - assets\images\kma-logo-app.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

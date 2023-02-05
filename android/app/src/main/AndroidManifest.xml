@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.kalkylanalys">
+    package="com.sfaholding.kmaanalys">
    <application
-        android:label="KMA_Analys"
+        android:label="KMA Analys"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true">
@@ -32,4 +32,9 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+
+    
+
 </manifest>
+
+
