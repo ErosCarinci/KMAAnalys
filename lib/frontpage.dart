@@ -4,6 +4,7 @@ import 'package:kalkylanalys/homepage.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'logout.dart';
 import 'frontpage.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'orderpage.dart';
 import 'infopage.dart';
 
@@ -16,6 +17,7 @@ class FrontPage extends StatefulWidget {
 
 class _FrontPageState extends State<FrontPage> {
   bool isSubscribed = false;
+  bool isLoading = false;
 
   @override
   void initState() {
@@ -225,18 +227,21 @@ class _FrontPageState extends State<FrontPage> {
                   ),
                 ),
                 ElevatedButton(
-                  child: SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.4,
-                    child: const Text(
-                      "Prenumerera",
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
+                  child: isLoading
+                      ? CircularProgressIndicator(color: Colors.white)
+                      : Text("Prenumerera"),
                   onPressed: () async {
+                    if (isLoading) return;
+                    setState(() => isLoading = true);
+
                     await Purchases.purchaseProduct('pren');
                   },
                   style: ElevatedButton.styleFrom(
+                    fixedSize: const Size.fromHeight(50),
+                    alignment: Alignment.center,
                     backgroundColor: const Color.fromARGB(255, 6, 197, 140),
+                    shape: const StadiumBorder(),
+                    minimumSize: const Size(220, 50),
                   ),
                 ),
               ],

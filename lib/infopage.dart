@@ -26,13 +26,13 @@ class _InfoPageState extends State<InfoPage> {
             children: <TextSpan>[
               const TextSpan(
                 text:
-                    'KMA Analys is an auto-renewable subscription. The subscription provides a 3-month free trial. After the free trial period has expired the user will be charged 1999kr every month. Your subscription will be charged to your Apple account at confirmation of purchase and will automatically renew every month unless auto-renew is turned off. You are free to cancel the subscription at any given time. Cancellation during the free trial period will end the free trial and prevent future charges to be made to your Apple account. ',
+                    'KMA Analys is an auto-renewable subscription. The user will be charged 1999kr every month. Your subscription will be charged to your Apple account at confirmation of purchase and will automatically renew every month unless auto-renew is turned off. You are free to cancel the subscription at any given time.',
               ),
               TextSpan(
                 text: 'Privacy policy',
                 style: const TextStyle(
                   decoration: TextDecoration.underline,
-                  color: Colors.blue,
+                  color: Color.fromARGB(255, 254, 254, 254),
                 ),
                 recognizer: TapGestureRecognizer()
                   ..onTap = () async {
@@ -50,7 +50,7 @@ class _InfoPageState extends State<InfoPage> {
                 text: 'Terms of Use',
                 style: const TextStyle(
                   decoration: TextDecoration.underline,
-                  color: Colors.blue,
+                  color: Color.fromARGB(255, 255, 255, 255),
                 ),
                 recognizer: TapGestureRecognizer()
                   ..onTap = () async {
